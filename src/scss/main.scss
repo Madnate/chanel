@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 html { 
   font-family: "Helvetica";
   background: #000000;
@@ -132,7 +136,8 @@ h1#main-title {
       max-height: 0;
 
       margin: 40px 0 0;
-
+      
+      opacity: 0;
       transition: 0.5s ease;
       overflow: hidden;
 
@@ -153,6 +158,7 @@ h1#main-title {
       &.is-open {
         max-height: 500px;
         transition: 0.5s ease;
+        opacity: 1;
       }
     }
   }
@@ -182,10 +188,12 @@ h1#main-title {
   }
   .image-container {
     margin-top: 100px;
+    overflow: hidden;
+    max-height: 1300px;
     img {
       display: block;
       margin: auto;
-      width: 100%;
+      width: auto;
       max-width: 80vw;
       @media screen and (min-width: 1024px) {
         width: 800px;
