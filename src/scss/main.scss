@@ -1,0 +1,196 @@
+@import "reset.scss";
+@import url(//db.onlinewebfonts.com/c/5fd740bac1abfb826fb7e35ae963efc9?family=ABChanel+Corpo+Regular);
+
+* {
+  box-sizing: border-box;
+}
+
+html { 
+  font-family: "Helvetica";
+  background: #000000;
+  height: 100%;
+}
+
+.container {
+  background-color: #000000;
+}
+
+.col {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+
+  background: url("../img/muses.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+h1#main-title {
+  position: relative;
+  color: #ef999d;
+  font-family: "ABChanel Corpo Regular", Helvetica, Arial, sans-serif;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: center; 
+
+  sup {
+    position: relative;
+    top: .5em;
+    left: 0;
+    font-size: 20px;
+    vertical-align: top;
+  }
+}
+
+.description {
+  font-size: 18px;
+  text-align: center;
+}
+
+.section-introduction {
+  color: white;
+  padding: 80px 50px;
+  margin-top: 100vh;
+
+  @media screen and (min-width: 1024px) {
+    padding: 100px 230px;
+  }
+  
+  .description {
+    margin-top: 30px;    
+  }
+}
+
+.text-container {
+  margin-top: 56px;
+  max-width: 1440px;
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    width: 100%;
+    line-height: 1.45;
+    font-size: 16px;
+    letter-spacing: 0.75px;
+
+    &:not(:first-child) {
+      @media screen and (max-width: 1023px) {
+        margin-top: 40px;
+      }
+    }
+    @media screen and (min-width: 1024px){
+      width: 45%;
+
+    }
+  }
+}
+
+.section-schedule {
+  padding: 110px 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    margin-bottom: 25px;
+    
+    text-align: center;
+    font-family: "ABChanel Corpo Regular", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    color: white;
+
+    letter-spacing: 0.6px;
+  }
+  .description {
+    margin-bottom: 12px;
+  }
+
+  .schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+      max-width: 600px;
+      max-height: 0;
+
+      margin: 40px 0 0;
+
+      transition: 0.5s ease;
+      overflow: hidden;
+
+      p {
+        margin-bottom: 12px;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        &:visited{
+          color: white;
+        }
+      }
+
+      &.is-open {
+        max-height: 500px;
+        transition: 0.5s ease;
+      }
+    }
+  }
+
+  button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 3px solid white;
+    border-radius: 100%;
+    background: transparent;
+
+    margin: 20px auto 0;
+
+    width: 43px;
+    height: 43px;
+
+    outline: none;
+    cursor: pointer;
+
+    transform: translateZ(0);
+    transition: .2s ease-out;
+    &.active {
+      transform: rotate(45deg) translateZ(0);
+    }
+  }
+  .image-container {
+    margin-top: 100px;
+    img {
+      display: block;
+      margin: auto;
+      width: 100%;
+      max-width: 80vw;
+      @media screen and (min-width: 1024px) {
+        width: 800px;
+      } 
+    }
+  }
+  
+}
